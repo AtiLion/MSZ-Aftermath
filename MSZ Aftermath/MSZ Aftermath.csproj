@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44085E33-2A1E-4E91-839F-27B9479C3FFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSZ_Aftermath</RootNamespace>
+    <AssemblyName>MSZ Aftermath</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Unturned\Unturned_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Unturned\Unturned_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="NativeAssemblerInjection">
+      <HintPath>..\..\..\..\Desktop\inj\NativeAssemblerInjection\bin\Debug\NativeAssemblerInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Unturned\Unturned_Data\Managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Unturned\Unturned_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\CMD_DisableHook.cs" />
+    <Compile Include="Commands\CMD_DropItems.cs" />
+    <Compile Include="Commands\CMD_Kick.cs" />
+    <Compile Include="Commands\CMD_Kill.cs" />
+    <Compile Include="Commands\CMD_Vac.cs" />
+    <Compile Include="ComponentManager.cs" />
+    <Compile Include="Hacks\Aimbot.cs" />
+    <Compile Include="Hacks\AutoItemPickup.cs" />
+    <Compile Include="Hacks\ESP.cs" />
+    <Compile Include="Hacks\ItemIDFilter.cs" />
+    <Compile Include="Hacks\ItemSelection.cs" />
+    <Compile Include="Hacks\ItemTP.cs" />
+    <Compile Include="Hacks\Main.cs" />
+    <Compile Include="Hacks\Player.cs" />
+    <Compile Include="Hacks\PlayerTP.cs" />
+    <Compile Include="Hacks\Server.cs" />
+    <Compile Include="Hacks\Triggerbot.cs" />
+    <Compile Include="Hacks\Vehicle.cs" />
+    <Compile Include="Hacks\Vision.cs" />
+    <Compile Include="Hacks\Waypoints.cs" />
+    <Compile Include="Hacks\WaypointTR.cs" />
+    <Compile Include="Hacks\Weapons.cs" />
+    <Compile Include="Hacks\World.cs" />
+    <Compile Include="Hook.cs" />
+    <Compile Include="Information.cs" />
+    <Compile Include="Injections\Ctrl.cs" />
+    <Compile Include="Injections\Overrides\DT.cs" />
+    <Compile Include="Injections\Overrides\LUI.cs" />
+    <Compile Include="Injections\Overrides\PDIUI.cs" />
+    <Compile Include="Injections\Overrides\PL.cs" />
+    <Compile Include="Injections\Overrides\PR.cs" />
+    <Compile Include="Injections\VehicleExploiter.cs" />
+    <Compile Include="Library\ASManager.cs" />
+    <Compile Include="Library\CMManager.cs" />
+    <Compile Include="Library\DrawManager.cs" />
+    <Compile Include="Library\EEManager.cs" />
+    <Compile Include="Library\FriendManager.cs" />
+    <Compile Include="Library\InfoManager.cs" />
+    <Compile Include="Library\ItemIDManager.cs" />
+    <Compile Include="Library\KeybindManager.cs" />
+    <Compile Include="Library\SettingManager.cs" />
+    <Compile Include="Library\SystemModifier.cs" />
+    <Compile Include="Library\WaypointManager.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="MenuUI.cs" />
+    <Compile Include="Library\NetManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedirectionHelper.cs" />
+    <Compile Include="Tool.cs" />
+    <Compile Include="Types\CommandType.cs" />
+    <Compile Include="Types\DrawType.cs" />
+    <Compile Include="Types\Friend.cs" />
+    <Compile Include="Types\HighlightType.cs" />
+    <Compile Include="Types\KeyBind.cs" />
+    <Compile Include="Types\Setting.cs" />
+    <Compile Include="Types\WAType.cs" />
+    <Compile Include="Types\Waypoint.cs" />
+    <Compile Include="Universal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
